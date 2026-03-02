@@ -1,0 +1,78 @@
+/* Creates the background image, makes sure it covers the whole page and doesn't repeat or move, and then starts the div at 0 opacity and then fades it in */
+body {
+   background-image: url(images/shadow-of-the-erdtree.jpg);
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+
+   opacity: 0;
+   animation: fadeIn 3.5s forwards;
+   animation-delay: 1.5s;
+}
+
+/* Animation to fade the center div in so you see the full art when you open the page */
+@keyframes fadeIn {
+   to {
+      opacity: 1;
+   }
+}
+
+/* This defines the formatting for the div that sits in the center of the screen, making it 1000px wide, slightly see-through, uses gold looking text, rounds the corners, defines Serif as the text font, creates shadow for the div, prevents overflow (like would have happened with the banner), and auto centers it */
+.centerpiece-div {
+   width: 1000px;
+   margin: auto;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: #b38a4c;
+   border-radius: 16px;
+   box-shadow: 10px 10px 5px black;
+   overflow: hidden;
+   font-family: "Serif";
+}
+
+.gold-hr {
+   border: none; /* remove default hr border */
+   height: 2px; /* thickness of the line */
+   width: 70%; /* so it doesn't stretch edge to edge */
+   margin: 2rem auto; /* center it with some space around */
+
+   /* Warm brown / golden gradient */
+   background: linear-gradient(to right, transparent 0%, #8b6b3c 20%, /* darker brown */ #d1b17a 50%, /* lighter golden brown */ #8b6b3c 80%, transparent 100%);
+}
+
+h1 {
+   margin: auto;
+}
+
+/* This defines a type of grid display where each element has equal space on the page */
+.grid-div {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 25px;
+   margin: 25px;
+}
+
+/* This is something I did on accident while testing things and I thought it looked super sick so I got a quote and added it in. This makes basically huge margins and text and then centers the quote */
+.centerpiece-quote {
+   margin: 200px 100px;
+   font-size: 3rem;
+   text-align: center;
+}
+
+/*
+.grace-bullet {
+   list-style-image: url(images/grace.png);
+}
+*/
+
+/* Common formatting for the form divs */
+.form-group {
+   margin-bottom: 10px;
+}
+
+/* Common formatting for most of the inputs */
+.input-field {
+   background-color: rgba(0, 0, 0, 0.4);
+   color: #b38a4c;
+   border-radius: 4px;
+   border-color: #b38a4c;
+}
