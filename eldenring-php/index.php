@@ -4,17 +4,13 @@
 
    Micah Jacobson
    12/10/25
-   I mostly used AI for troubleshooting. One of the big issues that I was encountering was trying to figure out why nothing was
-   getting posted to my database, and it turns out that joinNewsletter was causing issues, so I needed to force it to be set no 
-   matter if it was checked or not. AI also helped explain some things to me, like how mysqli_fetch_assoc works and I had ChatGPT
-   make a visual representation of how that worked.
 
    */
 
    $DBName = "elden_ring_php";
 
    //Connect to AWS instance
-   $dbc = mysqli_connect (
+   $dbc = mysqli_connect ( //The security here is intentionally poor.
       "iss4014.c9m4ksoy6t3u.us-east-1.rds.amazonaws.com",
       "admin",
       "password",
